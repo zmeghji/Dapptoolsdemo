@@ -1,0 +1,15 @@
+install package
+    dapp install OpenZeppelin/openzeppelin-contracts
+
+run test with custom number of fuzzing runs 
+    dapp test --fuzz-runs 1000
+
+add private key of deployer account into environment
+    ethsign import
+
+deploy contract 
+    make deploy
+    
+interact with contract :
+    ETH_RPC_URL=$ETH_RPC_URL seth call 0x5A9C69ce46F770AAD768604Ac382873133C094c3 "play(uint8 password)" 55
+
